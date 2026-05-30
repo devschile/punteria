@@ -11,46 +11,95 @@ export default <Config>{
   theme: {
     extend: {
       colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))'
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))'
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))'
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))'
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))'
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))'
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))'
-        }
+        // Semantic tokens del diseño light
+        surface: '#f9f9fc',
+        'surface-dim': '#dadadc',
+        'surface-bright': '#f9f9fc',
+        'surface-container-lowest': '#ffffff',
+        'surface-container-low': '#f3f3f6',
+        'surface-container': '#eeeef0',
+        'surface-container-high': '#e8e8ea',
+        'surface-container-highest': '#e2e2e5',
+        'on-surface': '#1a1c1e',
+        'on-surface-variant': '#434656',
+        'inverse-surface': '#2f3133',
+        'inverse-on-surface': '#f0f0f3',
+        outline: '#737688',
+        'outline-variant': '#c3c5d9',
+        'surface-tint': '#004bee',
+        primary: '#003dc7',
+        'on-primary': '#ffffff',
+        'primary-container': '#0051ff',
+        'on-primary-container': '#dee2ff',
+        'inverse-primary': '#b7c4ff',
+        secondary: '#006a62',
+        'on-secondary': '#ffffff',
+        'secondary-container': '#79f4e5',
+        'on-secondary-container': '#006f66',
+        tertiary: '#952200',
+        'on-tertiary': '#ffffff',
+        'tertiary-container': '#bf2f02',
+        'on-tertiary-container': '#ffdcd4',
+        error: '#ba1a1a',
+        'on-error': '#ffffff',
+        'error-container': '#ffdad6',
+        'on-error-container': '#93000a',
+        'primary-fixed': '#dde1ff',
+        'primary-fixed-dim': '#b7c4ff',
+        'on-primary-fixed': '#001452',
+        'on-primary-fixed-variant': '#0038b7',
+        'secondary-fixed': '#7cf6e7',
+        'secondary-fixed-dim': '#5ddacb',
+        'on-secondary-fixed': '#00201d',
+        'on-secondary-fixed-variant': '#005049',
+        'tertiary-fixed': '#ffdbd2',
+        'tertiary-fixed-dim': '#ffb4a1',
+        'on-tertiary-fixed': '#3c0800',
+        'on-tertiary-fixed-variant': '#891e00',
+        background: '#f9f9fc',
+        'on-background': '#1a1c1e',
+        'surface-variant': '#e2e2e5',
+      },
+      fontFamily: {
+        'display-lg': ['Geist Mono', 'sans-serif'],
+        'headline-md': ['Geist Mono', 'sans-serif'],
+        'headline-sm': ['Geist Mono', 'sans-serif'],
+        'headline-lg-mobile': ['Geist Mono', 'sans-serif'],
+        'body-lg': ['Public Sans', 'sans-serif'],
+        'body-md': ['Public Sans', 'sans-serif'],
+        'label-md': ['Public Sans', 'sans-serif'],
+        'label-sm': ['Public Sans', 'sans-serif'],
+      },
+      fontSize: {
+        'display-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'headline-md': ['24px', { lineHeight: '32px', fontWeight: '600' }],
+        'headline-sm': ['20px', { lineHeight: '28px', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+        'label-md': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.05em', fontWeight: '700' }],
+        'headline-lg-mobile': ['28px', { lineHeight: '36px', fontWeight: '700' }],
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
-      }
-    }
+        sm: '0.25rem',
+        DEFAULT: '0.5rem',
+        md: '0.75rem',
+        lg: '1rem',
+        xl: '1.5rem',
+        full: '9999px',
+      },
+      spacing: {
+        base: '4px',
+        xs: '4px',
+        sm: '8px',
+        md: '16px',
+        lg: '24px',
+        xl: '32px',
+        gutter: '16px',
+        'margin-mobile': '16px',
+        'margin-desktop': '48px',
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 }
