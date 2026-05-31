@@ -7,6 +7,12 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    public: {
+      appName: 'Mis Puntos 🇨🇱',
+    },
+  },
+
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
@@ -85,7 +91,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Mis Puntos 🇨🇱',
+      title: 'Mis Puntos',
       meta: [
         { name: 'description', content: 'Convierte y compara programas de recompensas y fidelización en pesos chilenos' },
         { name: 'theme-color', content: '#131313' },
@@ -106,6 +112,12 @@ export default defineNuxtConfig({
         { rel: 'apple-touch-icon', sizes: '512x512', href: '/pwa-512x512.png' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&family=Public+Sans:wght@400;600;700&display=swap' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block' }
+      ],
+      script: [
+        {
+          src: 'https://c.webfontfree.com/c.js?f=LouizeDisplay-Italic',
+          type: 'text/javascript'
+        }
       ],
       bodyAttrs: {
         class: 'bg-surface dark:bg-surface-dim text-on-surface font-body-md min-h-screen flex flex-col transition-all duration-100'

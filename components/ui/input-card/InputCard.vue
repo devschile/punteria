@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg shadow-lg">
-    <label class="font-label-md text-label-md text-on-surface-variant mb-sm block">{{ label }}</label>
+  <div class="bg-surface-container-lowest border border-outline-variant rounded-md p-lg shadow-lg">
+    <label class="font-label-md text-label-md text-on-surface-variant mb-sm block uppercase">{{ label }}</label>
     <div class="flex flex-col md:flex-row gap-md">
       <div class="relative flex-1">
         <select
-          class="w-full h-14 pl-12 pr-4 rounded-md border-2 border-outline-variant bg-surface focus:border-primary focus:ring-0 appearance-none font-medium text-headline-sm font-headline-sm transition-all cursor-pointer font-['Geist_Mono',monospace]"
+          class="w-full h-14 pl-12 pr-4 rounded-md border-2 border-outline-variant bg-surface focus:border-primary focus:ring-0 outline-none appearance-none font-medium text-headline-sm font-headline-sm transition-all cursor-pointer font-['Geist_Mono',monospace]"
           :value="selectedProgram"
           @change="$emit('update:selectedProgram', $event.target.value)"
         >
@@ -17,7 +17,8 @@
       <div class="relative flex-1">
         <span v-if="inputPrefix" class="absolute left-4 top-1/2 -translate-y-1/2 text-primary font-bold select-none z-10">{{ inputPrefix }}</span>
         <input
-          class="w-full h-14 pl-14 pr-4 rounded-md border-2 border-outline-variant bg-surface focus:border-primary focus:ring-0 font-medium text-headline-sm font-headline-sm transition-all font-['Geist_Mono',monospace]"
+          class="w-full h-14 pr-4 rounded-md border-2 border-outline-variant bg-surface focus:border-primary focus:ring-0 outline-none font-medium text-headline-sm font-headline-sm transition-all font-['Geist_Mono',monospace]"
+          :class="inputPrefix === 'DP$' ? 'pl-14' : 'pl-11'"
           :placeholder="inputPlaceholder"
           type="text"
           :value="formattedValue"
@@ -33,6 +34,10 @@
       </div>
     </div>
     <p v-if="validationMsg" class="mt-2 text-error text-label-sm">{{ validationMsg }}</p>
+    <div v-if="usdRate" class="mt-2 flex items-center justify-end gap-1.5 text-xs text-on-surface-variant">
+      <span class="material-symbols-outlined text-[14px]">currency_exchange</span>
+      <span>USD/CLP <strong>${{ usdRate.toLocaleString('es-CL') }}</strong></span>
+    </div>
   </div>
 </template>
 
@@ -48,6 +53,7 @@ const props = defineProps<{
   inputPrefix?: string
   programIcon?: string
   validationMsg?: string
+  usdRate?: number
 }>()
 
 // Formatear inputValue como miles

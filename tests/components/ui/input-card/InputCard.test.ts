@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { InputCard } from '@/components/ui/input-card'
 
@@ -60,5 +60,74 @@ describe('InputCard', () => {
       }
     })
     expect(wrapper.text()).toContain('Mínimo $1.000 pesos')
+  })
+
+  it('formatea el valor con separador de miles', () => {
+    const wrapper = mount(InputCard, {
+      props: {
+        label: 'Conversión',
+        programOptions,
+        selectedProgram: 'clp',
+        inputValue: '5000'
+      }
+    })
+    const input = wrapper.find('input').element as HTMLInputElement
+    expect(input.value).toBe('5.000')
+  })
+
+  it('input vacío muestra valor vacío', () => {
+    const wrapper = mount(InputCard, {
+      props: {
+        label: 'Conversión',
+        programOptions,
+        selectedProgram: 'clp',
+        inputValue: ''
+      }
+    })
+    const input = wrapper.find('input').element as HTMLInputElement
+    expect(input.value).toBe('')
+  })
+
+  it('filtra no dígitos en desktop input', async () => {
+    const wrapper = mount(InputCard, {
+      props: {
+        label: 'Conversión',
+        programOptions,
+        selectedProgram: 'clp',
+        inputValue: ''
+      }
+    })
+    const input = wrapper.find('input')
+    await input.setValue('abc123def')
+    const emitted = wrapper.emitted('update:inputValue')!
+    expect(emitted[emitted.length - 1]).toEqual(['123'])
+  })
+
+  it('acorta a 8 dígitos máximo', async () => {
+    const wrapper = mount(InputCard, {
+      props: {
+        label: 'Conversión',
+        programOptions,
+        selectedProgram: 'clp',
+        inputValue: ''
+      }
+    })
+    const input = wrapper.find('input')
+    await input.setValue('1234567890')
+    const emitted = wrapper.emitted('update:inputValue')!
+    expect(emitted[emitted.length - 1]).toEqual(['12345678'])
+  })
+
+  it('muestra el tipo de cambio USD si se provee', () => {
+    const wrapper = mount(InputCard, {
+      props: {
+        label: 'Conversión',
+        programOptions,
+        selectedProgram: 'clp',
+        inputValue: '10000',
+        usdRate: 940
+      }
+    })
+    expect(wrapper.text()).toContain('940')
   })
 })

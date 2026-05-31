@@ -101,9 +101,11 @@ export default <Config>{
         'body-md': ['Public Sans', 'sans-serif'],
         'label-md': ['Public Sans', 'sans-serif'],
         'label-sm': ['Public Sans', 'sans-serif'],
+        'serif': ['LouizeDisplay-Italic', 'cursive']
       },
       fontSize: {
         'display-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'headline-lg': ['28px', { lineHeight: '36px', fontWeight: '600' }],
         'headline-md': ['24px', { lineHeight: '32px', fontWeight: '600' }],
         'headline-sm': ['20px', { lineHeight: '28px', fontWeight: '600' }],
         'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
