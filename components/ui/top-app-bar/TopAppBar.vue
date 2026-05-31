@@ -1,13 +1,16 @@
 <template>
   <header
-    class="bg-surface text-primary border-b border-outline-variant flex justify-between items-center px-[var(--margin-mobile)] md:px-[var(--margin-desktop)] h-16 w-full fixed top-0 z-50">
-    <div class="flex items-center gap-sm cursor-pointer" @click="onLogoClick">
-      <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">loyalty</span>
-      <h1 class="font-headline-md text-headline-md font-bold text-primary">{{ title }}</h1>
+    class="bg-[linear-gradient(180deg, rgb(255 255 255 / 80%) 0%, rgb(240 240 240 / 40%) 60%)] dark:bg-[linear-gradient(180deg,rgba(26,18,40,0.45)_0%,rgba(10,10,15,0.85)_60%)] backdrop-blur-md text-primary border-outline-variant/20 flex justify-between items-start py-3 px-[var(--margin-mobile)] md:px-[var(--margin-desktop)] w-full fixed top-0 z-50">
+    <div class="flex-column cursor-pointer" @click="onLogoClick">
+      <div class="flex items-center gap-sm mb-2">
+        <span class="text-2xl">🇨🇱</span>
+        <h1 class="font-headline-md text-headline-md font-bold text-primary">{{ title }}</h1>
+      </div>
+      <p class="text-xs text-black/30 dark:text-white/30">Convierte y compara programas de recompensas y fidelización en pesos chilenos.</p>
     </div>
-    <div class="flex gap-md items-center">
-      <button class="p-2 flex align-center rounded-full active:scale-95 duration-100 cursor-pointer" @click="onToggleTheme" aria-label="Cambiar tema">
-        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">
+    <div class="flex ml-4 items-center">
+      <button class="flex align-center rounded-full active:scale-95 duration-100 cursor-pointer" @click="onToggleTheme" aria-label="Cambiar tema">
+        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">
           {{ colorMode === 'dark' ? 'light_mode' : 'dark_mode' }}
         </span>
       </button>

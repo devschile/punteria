@@ -16,8 +16,8 @@ describe('TopAppBar', () => {
 
   it('emite logo-click al hacer click en el logo', async () => {
     const wrapper = mount(TopAppBar, { props: { title: 'Test' } })
-    // Busca el div clickeable por el texto y la clase
-    const logoDiv = wrapper.find('div.flex.items-center.cursor-pointer')
+    // Busca el div clickeable (tiene cursor-pointer)
+    const logoDiv = wrapper.find('div.cursor-pointer')
     expect(logoDiv.exists()).toBe(true)
     await logoDiv.trigger('click')
     expect(wrapper.emitted('logo-click')).toBeTruthy()

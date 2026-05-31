@@ -33,10 +33,10 @@ export default defineNuxtConfig({
     registerType: 'autoUpdate',
     includeAssets: ['favicon.png', 'pwa-192x192.png', 'pwa-512x512.png'],
     manifest: {
-      name: 'Mis Puntos CL',
-      short_name: 'PuntosCL',
+      name: 'Mis Puntos 🇨🇱',
+      short_name: 'MisPuntosCL',
       description:
-        'Gestiona y acumula tus puntos de fidelización de forma inteligente. Controla tus recompensas, canjes y beneficios en un solo lugar.',
+        'Convierte y compara programas de recompensas y fidelización en pesos chilenos',
       theme_color: '#131313',
       background_color: '#131313',
       display: 'standalone',
@@ -85,17 +85,17 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Mis Puntos CL',
+      title: 'Mis Puntos 🇨🇱',
       meta: [
-        { name: 'description', content: 'Gestiona y acumula tus puntos de fidelización de forma inteligente. Controla tus recompensas, canjes y beneficios en un solo lugar.' },
+        { name: 'description', content: 'Convierte y compara programas de recompensas y fidelización en pesos chilenos' },
         { name: 'theme-color', content: '#131313' },
         { property: 'og:title', content: 'Mis Puntos CL' },
-        { property: 'og:description', content: 'Gestiona y acumula tus puntos de fidelización de forma inteligente.' },
+        { property: 'og:description', content: 'Convierte y compara programas de recompensas y fidelización en pesos chilenos' },
         { property: 'og:type', content: 'website' },
         { property: 'og:image', content: '/social.jpg' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Mis Puntos CL' },
-        { name: 'twitter:description', content: 'Gestiona y acumula tus puntos de fidelización de forma inteligente.' },
+        { name: 'twitter:description', content: 'Convierte y compara programas de recompensas y fidelización en pesos chilenos' },
         { name: 'twitter:image', content: '/social.jpg' }
       ],
       link: [

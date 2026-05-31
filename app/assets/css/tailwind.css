@@ -102,10 +102,10 @@
     --border: #434656;
     --input: #434656;
     --ring: #b7c4ff;
-    --surface: #131313;
+    --surface: #0a0a0f;
     --surface-dim: #131313;
     --surface-bright: #3a3939;
-    --surface-container-lowest: #0e0e0e;
+    --surface-container-lowest: #13131a;
     --surface-container-low: #1c1b1b;
     --surface-container: #201f1f;
     --surface-container-high: #2a2a2a;
@@ -115,9 +115,9 @@
     --inverse-surface: #e5e2e1;
     --inverse-on-surface: #313030;
     --outline: #8d90a2;
-    --outline-variant: #434656;
+    --outline-variant: #363158;
     --surface-tint: #b7c4ff;
-    --primary: #b7c4ff;
+    --primary: #4af79a;
     --on-primary: #002583;
     --primary-container: #0051ff;
     --on-primary-container: #dee2ff;
