@@ -101,7 +101,7 @@ export default <Config>{
         'body-md': ['Public Sans', 'sans-serif'],
         'label-md': ['Public Sans', 'sans-serif'],
         'label-sm': ['Public Sans', 'sans-serif'],
-        'serif': ['Playfair Display', 'serif']
+        'serif': ['Bricolage Grotesque', 'serif']
       },
       fontSize: {
         'display-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.02em', fontWeight: '700' }],

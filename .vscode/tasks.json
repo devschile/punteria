@@ -48,6 +48,12 @@
 			"type": "shell",
 			"command": "cd /Users/jorgeepunan/Sites/MisPuntosCL && pnpm build",
 			"group": "build"
+		},
+		{
+			"label": "build",
+			"type": "shell",
+			"command": "cd /Users/jorgeepunan/Sites/MisPuntosCL && pnpm build",
+			"group": "build"
 		}
 	]
 }

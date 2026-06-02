@@ -18,7 +18,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      appName: 'Mis Puntos 🇨🇱',
+      appName: 'Mis Puntos',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://mispuntos.cl',
     },
   },
@@ -120,7 +120,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', href: '/favicon.png' },
         { rel: 'apple-touch-icon', sizes: '192x192', href: '/pwa-192x192.png' },
         { rel: 'apple-touch-icon', sizes: '512x512', href: '/pwa-512x512.png' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&family=Public+Sans:wght@400;600;700&family=Playfair+Display:ital@1&display=swap' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&family=Public+Sans:wght@400;600;700&family=Bricolage+Grotesque:wght@200;700&display=swap' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block' }
       ],
       bodyAttrs: {
