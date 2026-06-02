@@ -120,14 +120,8 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', href: '/favicon.png' },
         { rel: 'apple-touch-icon', sizes: '192x192', href: '/pwa-192x192.png' },
         { rel: 'apple-touch-icon', sizes: '512x512', href: '/pwa-512x512.png' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&family=Public+Sans:wght@400;600;700&display=swap' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&family=Public+Sans:wght@400;600;700&family=Playfair+Display:ital@1&display=swap' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block' }
-      ],
-      script: [
-        {
-          src: 'https://c.webfontfree.com/c.js?f=LouizeDisplay-Italic',
-          type: 'text/javascript'
-        }
       ],
       bodyAttrs: {
         class: 'bg-surface dark:bg-surface-dim text-on-surface font-body-md min-h-screen flex flex-col transition-all duration-100'

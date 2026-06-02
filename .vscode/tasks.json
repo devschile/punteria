@@ -36,6 +36,18 @@
 			"type": "shell",
 			"command": "cd /Users/jorgeepunan/Sites/MisPuntosCL && pnpm test",
 			"group": "test"
+		},
+		{
+			"label": "build",
+			"type": "shell",
+			"command": "cd /Users/jorgeepunan/Sites/MisPuntosCL && pnpm build",
+			"group": "build"
+		},
+		{
+			"label": "build-test",
+			"type": "shell",
+			"command": "cd /Users/jorgeepunan/Sites/MisPuntosCL && pnpm build",
+			"group": "build"
 		}
 	]
 }
